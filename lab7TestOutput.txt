@@ -1,0 +1,46 @@
+test1a() ==>
+[]
+[2]
+[2]
+[2]
+
+
+test1b() ==>
+["and"]
+[]
+["Acres","and","at"]
+
+
+test1c() ==>
+true
+false
+true
+
+
+test1d() ==>
+["abcd","abcde"]
+["abcd"]
+
+
+test1e() ==>
+"and"
+"HelloWorld"
+
+
+test1f() ==>
+1.0
+2.0
+3.0
+
+
+test2() ==>
+true
+false
+
+
+test3() ==>
+2.0
+6.0
+1.0
+
+

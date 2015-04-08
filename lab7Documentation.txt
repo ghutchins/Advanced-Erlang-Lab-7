@@ -1,0 +1,91 @@
+
+CSC 231 Lab 7 - Advanced Erlang: Higher Order Functions, Type Definitions Documentation
+Georgina Hutchins
+
+
+1.
+	a) extractEvens() implements the higher level function filter, to take an input
+		list of integers and return a new list that contains only the even integers
+		from the list.
+
+		even() is an auxiliary function that acts as the predicate function when
+			extractEvens() uses the filter function. If an element from the
+			list is even,then it will return true in filter(), and those 
+			elements will form the new list to return.
+
+	b) extractAWords() takes a list of strings as input and uses filter to return
+		the list that only contains the elements that begin with character 'A'
+		or 'a.' The predicate function for filter is beginsWithA().
+		
+		isA() takes a character X as input and returns true if that character
+			is 'A' or 'a,' else it returns false.
+
+		beginsWithA() takes a string input and calls isA() on the head of the
+			string.
+
+	c) logicalOR() takes a list of boolean values as input and applies reduce() to 
+		auxiliary function isTrue() to return true if any of the expressions in
+		the list are true, else logicalOR returns false.
+
+		isTrue() takes 2 input values and performs a logical or on X and Y
+			using the 'orelse' operator.
+
+	d) longStrings takes an input list of strings and returns only the elements
+		that are more than 3 characters long using the filter function and
+		auxiliary function greaterThan3().
+
+		greaterThan3() takes a single string as input and returns either true or
+			false depending on if the string is more than 3 characters long.
+			The function implements function getLength() to determine 
+			the string length.
+
+		getLength() takes 2 inputs, a string and the integer value for the length
+			requirement. It recursively cycles through the characters of an 
+			input string 3 times. If the string is empty after the cycling,
+			an empty string is returned, else the remaining string is returned. 
+			greaterThan3() uses the return of an empty string from getLength()
+			as a conditional for that string to return false from greaterThan3().
+
+	e) strcat() takes a list of strings as input and concatenates them into a single 
+		string using the reduce function and auxiliary function concatenate().
+
+		concatenate() takes two non-empty lists as input and concatenates
+			them.
+
+	f) max() takes a list of numerical values as input and returns the maxiumum
+		value using reduce and auxiliary function findMax().
+
+		findMax() takes two numerical values as input, compares them, and
+			returns the larger.
+
+2. findInTree() takes 2 inputs, the string label of interested, and the tree that
+	should be searched to find it. It determines if the string of interest
+	is in the tree in n steps or less, where n is the number of nodes in the tree.
+	It implements helper function findNode().
+
+		findNode() takes a string and a single node as input. If the 
+			string matches the value of the node, it returns true,
+			else it recursively searches the right and left sub-trees of
+			the node, traversing the tree until the desired string is either
+			discovered, or indicates that it does not exist.
+
+3. evaluate() takes an expression tree as input, evaluates it based on the operators and 
+	numerical values, and then returns the result. It uses helper function evaluateNode().
+
+		evaluateNode() takes a single node as input and determines what operator
+			is in its value, and then recursively performs that operation on the
+			node's left and right sub-trees. The function will iterate until 
+			all of the number-holding nodes (which have no children) are evaluated.
+
+
+
+
+
+
+
+
+
+
+
+
+
